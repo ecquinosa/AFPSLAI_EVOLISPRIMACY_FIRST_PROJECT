@@ -1,0 +1,30 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AllcardEncryptDecrypt
+</name>
+</assembly>
+<members>
+<member name="M:AllcardEncryptDecrypt.EncryptDecrypt.TripleDesEncryptText(System.String)">
+	<summary>
+ Encrypts a text using TripleDES Encryption.
+ </summary>
+	<param name="strText">A Valid String Object.</param>
+	<returns>Encrypted Text</returns>
+	<remarks>Encryption Key is "baronpogi" without the quotes.</remarks>
+</member><member name="M:AllcardEncryptDecrypt.EncryptDecrypt.TripleDesDecryptText(System.String)">
+	<summary>
+ Decrypts a text using TripleDes Decryption.
+ </summary>
+	<param name="strText">A Valid String Object.</param>
+	<returns>Decrypted Text</returns>
+	<remarks>Decryption Key is "baronpogi" without the quotes.</remarks>
+</member><member name="M:AllcardEncryptDecrypt.EncryptDecrypt.TripleDesEncrypt(System.String,System.String)">
+	<summary>
+ Procedure for ecrypting text using TripleDes Encryption.
+ </summary>
+	<param name="strText">A Valid String Object.</param>
+	<param name="strEncrKey">A Valid Key for Encryption.</param>
+	<returns>Encrypted Text</returns>
+</member><me

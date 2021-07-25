@@ -1,0 +1,851 @@
+ï»¿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AFPSLAI_EVOLISPRIMACY
+</name>
+</assembly>
+<members>
+<member name="T:AFPSLAI_EVOLISPRIMACY.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:AFPSLAI_EVOLISPRIMACY.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:AFPSLAI_EVOLISPRIMACY.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:AFPSLAI_EVOLISPRIMACY.SCARD_IO_REQUEST">
+ <summary> 
+ The SCARD_IO_REQUEST structure begins a protocol control information structure. Any protocol-specific information then immediately follows this structure. The entire length of the structure must be aligned with the underlying hardware architecture word size. For example, in Win32 the length of any PCI information must be a multiple of four bytes so that it aligns on a 32-bit boundary. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.SCARD_IO_REQUEST.dwProtocol">
+ <summary> 
+ Protocol in use. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.SCARD_IO_REQUEST.cbPciLength">
+ <summary> 
+ Length, in bytes, of the SCARD_IO_REQUEST structure plus any following PCI-specific information. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.APDURec.bCLA">
+ <summary> 
+ The T=0 instruction class. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.APDURec.bINS">
+ <summary> 
+ An instruction code in the T=0 instruction class. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.APDURec.bP1">
+ <summary> 
+ Reference codes that complete the instruction code. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.APDURec.bP2">
+ <summary> 
+ Reference codes that complete the instruction code. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.APDURec.bP3">
+ <summary> 
+ The number of data bytes to be transmitted during the command, per ISO 7816-4, Section 8.2.1. 
+ </summary> 
+</member>
+<member name="T:AFPSLAI_EVOLISPRIMACY.SCARD_READERSTATE">
+ <summary> 
+ The SCARD_READERSTATE structure is used by functions for tracking smart cards within readers. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.SCARD_READERSTATE.RdrName">
+ <summary> 
+ Pointer to the name of the reader being monitored. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.SCARD_READERSTATE.UserData">
+ <summary> 
+ Not used by the smart card subsystem. This member is used by the application. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.SCARD_READERSTATE.RdrCurrState">
+ <summary> 
+ Current state of the reader, as seen by the application. This field can take on any of the following values, in combination, as a bit mask. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.SCARD_READERSTATE.RdrEventState">
+ <summary> 
+ Current state of the reader, as known by the smart card resource manager. This field can take on any of the following values, in combination, as a bit mask. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.SCARD_READERSTATE.ATRLength">
+ <summary> 
+ Number of bytes in the returned ATR. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.SCARD_READERSTATE.ATRValue">
+ <summary> 
+ ATR of the inserted card, with extra alignment bytes. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_SCOPE_USER">
+ <summary> 
+ The context is a user context, and any database operations 
+ are performed within the domain of the user. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_SCOPE_TERMINAL">
+ <summary> 
+ The context is that of the current terminal, and any database 
+ operations are performed within the domain of that terminal. 
+ (The calling application must have appropriate access permissions 
+ for any database actions.) 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_SCOPE_SYSTEM">
+ <summary> 
+ The context is the system context, and any database operations 
+ are performed within the domain of the system. (The calling 
+ application must have appropriate access permissions for any 
+ database actions.) 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_STATE_UNAWARE">
+ <summary> 
+ The application is unaware of the current state, and would like 
+ to know. The use of this value results in an immediate return 
+ from state transition monitoring services. This is represented 
+ by all bits set to zero. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_STATE_IGNORE">
+ <summary> 
+ The application requested that this reader be ignored. No other 
+ bits will be set. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_STATE_CHANGED">
+ <summary> 
+ This implies that there is a difference between the state 
+ believed by the application, and the state known by the Service 
+ Manager.When this bit is set, the application may assume a 
+ significant state change has occurred on this reader. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_STATE_UNKNOWN">
+ <summary> 
+ This implies that the given reader name is not recognized by 
+ the Service Manager. If this bit is set, then SCARD_STATE_CHANGED 
+ and SCARD_STATE_IGNORE will also be set. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_STATE_UNAVAILABLE">
+ <summary> 
+ This implies that the actual state of this reader is not 
+ available. If this bit is set, then all the following bits are 
+ clear. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_STATE_EMPTY">
+ <summary> 
+ This implies that there is not card in the reader. If this bit 
+ is set, all the following bits will be clear. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_STATE_PRESENT">
+ <summary> 
+ This implies that there is a card in the reader. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_STATE_ATRMATCH">
+ <summary> 
+ This implies that there is a card in the reader with an ATR 
+ matching one of the target cards. If this bit is set, 
+ SCARD_STATE_PRESENT will also be set. This bit is only returned 
+ on the SCardLocateCard() service. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_STATE_EXCLUSIVE">
+ <summary> 
+ This implies that the card in the reader is allocated for 
+ exclusive use by another application. If this bit is set, 
+ SCARD_STATE_PRESENT will also be set. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_STATE_INUSE">
+ <summary> 
+ This implies that the card in the reader is in use by one or 
+ more other applications, but may be connected to in shared mode. 
+ If this bit is set, SCARD_STATE_PRESENT will also be set. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_STATE_MUTE">
+ <summary> 
+ This implies that the card in the reader is unresponsive or not 
+ supported by the reader or software. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_STATE_UNPOWERED">
+ <summary> 
+ This implies that the card in the reader has not been powered up. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_SHARE_EXCLUSIVE">
+ <summary> 
+ This application is not willing to share this card with other 
+ applications. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_SHARE_SHARED">
+ <summary> 
+ This application is willing to share this card with other 
+ applications. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_SHARE_DIRECT">
+ <summary> 
+ This application demands direct control of the reader, so it 
+ is not available to other applications. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_LEAVE_CARD">
+ <summary> 
+ Don't do anything special on close 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_RESET_CARD">
+ <summary> 
+ Reset the card on close 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_UNPOWER_CARD">
+ <summary> 
+ Power down the card on close 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_EJECT_CARD">
+ <summary> 
+ Eject the card on close 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_PROTOCOL_UNDEFINED">
+ <summary> 
+ There is no active protocol. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_PROTOCOL_T0">
+ <summary> 
+ T=0 is the active protocol. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_PROTOCOL_T1">
+ <summary> 
+ T=1 is the active protocol. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_PROTOCOL_RAW">
+ <summary> 
+ Raw is the active protocol. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_PROTOCOL_DEFAULT">
+ <summary>
+ Use implicit PTS.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_UNKNOWN">
+ <summary> 
+ This value implies the driver is unaware of the current 
+ state of the reader. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_ABSENT">
+ <summary> 
+ This value implies there is no card in the reader. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_PRESENT">
+ <summary> 
+ This value implies there is a card is present in the reader, 
+ but that it has not been moved into position for use. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_SWALLOWED">
+ <summary> 
+ This value implies there is a card in the reader in position 
+ for use. The card is not powered. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_POWERED">
+ <summary> 
+ This value implies there is power is being provided to the card, 
+ but the Reader Driver is unaware of the mode of the card. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_NEGOTIABLE">
+ <summary> 
+ This value implies the card has been reset and is awaiting 
+ PTS negotiation. 
+ </summary> 
+</member>
+<member name="F:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCARD_SPECIFIC">
+ <summary> 
+ This value implies the card has been reset and specific 
+ communication protocols have been established. 
+ </summary> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCardEstablishContext(System.Int32,System.Int32,System.Int32,System.Int32@)">
+ <summary> 
+ The SCardEstablishContext function establishes the resource manager context (the scope) within which database operations are performed. 
+ </summary> 
+ <param name="dwScope">[in] Scope of the resource manager context. This parameter can be one of the following values.</param> 
+ <param name="pvReserved1">[in] Reserved for future use and must be NULL. This parameter will allow a suitably privileged management application to act on behalf of another user.</param> 
+ <param name="pvReserved2">[in] Reserved for future use and must be NULL. </param> 
+ <param name="phContext">[out] Handle to the established resource manager context. This handle can now be supplied to other functions attempting to do work within this context.</param> 
+ <returns></returns> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCardReleaseContext(System.Int32)">
+ <summary> 
+ The SCardReleaseContext function closes an established resource manager context, freeing any resources allocated under that context, including SCARDHANDLE objects and memory allocated using the SCARD_AUTOALLOCATE length designator. 
+ </summary> 
+ <param name="hContext">[in] Handle that identifies the resource manager context. The resource manager context is set by a previous call to SCardEstablishContext.</param> 
+ <returns></returns> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCardConnect(System.Int32,System.String@,System.Int32,System.Int32,System.Int32@,System.Int32@)">
+ <summary> 
+ The SCardConnect function establishes a connection (using a specific resource manager context) between the calling application and a smart card contained by a specific reader. If no card exists in the specified reader, an error is returned. 
+ </summary> 
+ <param name="hContext">[in] A handle that identifies the resource manager context. The resource manager context is set by a previous call to SCardEstablishContext.</param> 
+ <param name="szReaderName">[in] The name of the reader that contains the target card. </param> 
+ <param name="dwShareMode">[in] A flag that indicates whether other applications may form connections to the card.</param> 
+ <param name="dwPrefProtocol">[in] A bit mask of acceptable protocols for the connection. Possible values may be combined with the OR operation.</param> 
+ <param name="hCard">[out] A handle that identifies the connection to the smart card in the designated reader. </param> 
+ <param name="ActiveProtocol">[out] A flag that indicates the established active protocol.</param> 
+ <returns></returns> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCardDisconnect(System.Int32,System.Int32)">
+ <summary> 
+ The SCardDisconnect function terminates a connection previously opened between the calling application and a smart card in the target reader. 
+ </summary> 
+ <param name="hCard">[in] Reference value obtained from a previous call to SCardConnect. </param> 
+ <param name="Disposition">[in] Action to take on the card in the connected reader on close. </param> 
+ <returns>This function returns different values depending on whether it succeeds or fails.</returns> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCardListReaderGroups(System.Int32,System.String@,System.Int32@)">
+ <summary> 
+ The SCardListReaderGroups function provides the list of reader groups that have previously been introduced to the system. 
+ </summary> 
+ <param name="hContext">[in] Handle that identifies the resource manager context for the query. The resource manager context can be set by a previous call to SCardEstablishContext. This parameter cannot be NULL.</param> 
+ <param name="mzGroups">[out] Multi-string that lists the reader groups defined to the system and available to the current user on the current terminal. If this value is NULL, SCardListReaderGroups ignores the buffer length supplied in pcchGroups, writes the length of the buffer that would have been returned if this parameter had not been NULL to pcchGroups, and returns a success code.</param> 
+ <param name="pcchGroups">[in, out] Length of the mszGroups buffer in characters, and receives the actual length of the multi-string structure, including all trailing null characters. If the buffer length is specified as SCARD_AUTOALLOCATE, then mszGroups is converted to a pointer to a byte pointer, and receives the address of a block of memory containing the multi-string structure. This block of memory must be deallocated with SCardFreeMemory. </param> 
+ <returns>This function returns different values depending on whether it succeeds or fails.</returns> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCardBeginTransaction(System.Int32)">
+ <summary> 
+ The SCardBeginTransaction function starts a transaction, waiting for the completion of all other transactions before it begins. 
+ When the transaction starts, all other applications are blocked from accessing the smart card while the transaction is in progress. 
+ </summary> 
+ <param name="hCard">[in] Reference value obtained from a previous call to SCardConnect.</param> 
+ <returns>This function returns different values depending on whether it succeeds or fails.</returns> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCardEndTransaction(System.Int32,System.Int32)">
+ <summary> 
+ The SCardEndTransaction function completes a previously declared transaction, allowing other applications to resume interactions with the card. 
+ </summary> 
+ <param name="hCard">[in] Reference value obtained from a previous call to SCardConnect. This value would also have been used in an earlier call to SCardBeginTransaction.</param> 
+ <param name="Disposition">[in] Action to take on the card in the connected reader on close. </param> 
+ <returns>This function returns different values depending on whether it succeeds or fails.</returns> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCardStatus(System.Int32,System.String@,System.Int32@,System.Int32@,System.Int32@,System.Byte@,System.Int32@)">
+ <summary> 
+ The SCardStatus function provides the current status of a smart card in a reader. You can call it any time after a successful call to SCardConnect and before a successful call to SCardDisconnect. It does not affect the state of the reader or reader driver. 
+ </summary> 
+ <param name="hCard">[in] Reference value returned from SCardConnect. </param> 
+ <param name="szReaderName">[out] List of friendly names (multiple string) by which the currently connected reader is known. </param> 
+ <param name="pcchReaderLen">[in, out] On input, supplies the length of the szReaderName buffer. 
+ On output, receives the actual length (in characters) of the reader name list, including the trailing NULL character. If this buffer length is specified as SCARD_AUTOALLOCATE, then szReaderName is converted to a pointer to a byte pointer, and it receives the address of a block of memory that contains the multiple-string structure.</param> 
+ <param name="State">[out] Current state of the smart card in the reader. Upon success, it receives one of the following state indicators.</param> 
+ <param name="Protocol">[out] Current protocol, if any. The returned value is meaningful only if the returned value of pdwState is SCARD_SPECIFICMODE.</param> 
+ <param name="ATR">[out] Pointer to a 32-byte buffer that receives the ATR string from the currently inserted card, if available.</param> 
+ <param name="ATRLen">[in, out] On input, supplies the length of the pbAtr buffer. On output, receives the number of bytes in the ATR string (32 bytes maximum). If this buffer length is specified as SCARD_AUTOALLOCATE, then pbAtr is converted to a pointer to a byte pointer, and it receives the address of a block of memory that contains the multiple-string structure.</param> 
+ <returns>If the function successfully provides the current status of a smart card in a reader, the return value is SCARD_S_SUCCESS. 
+ If the function fails, it returns an error code. For more information, see Smart Card Return Values.</returns> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCardTransmit(System.Int32,AFPSLAI_EVOLISPRIMACY.SCARD_IO_REQUEST@,System.Byte@,System.Int32,AFPSLAI_EVOLISPRIMACY.SCARD_IO_REQUEST@,System.Byte@,System.Int32@)">
+ <summary> 
+ The SCardTransmit function sends a service request to the smart card and expects to receive data back from the card. 
+ </summary> 
+ <param name="hCard">[in] A reference value returned from the SCardConnect function.</param> 
+ <param name="pioSendRequest">[in] A pointer to the protocol header structure for the instruction. This buffer is in the format of an SCARD_IO_REQUEST structure, followed by the specific protocol control information (PCI). 
+ For the T=0, T=1, and Raw protocols, the PCI structure is constant. The smart card subsystem supplies a global T=0, T=1, or Raw PCI structure, which you can reference by using the symbols SCARD_PCI_T0, SCARD_PCI_T1, and SCARD_PCI_RAW respectively.</param> 
+ <param name="SendBuff">[in] A pointer to the actual data to be written to the card. </param> 
+ <param name="SendBuffLen">[in] The length, in bytes, of the pbSendBuffer parameter. </param> 
+ <param name="pioRecvRequest">[in, out] Pointer to the protocol header structure for the instruction, followed by a buffer in which to receive any returned protocol control information (PCI) specific to the protocol in use. This parameter can be NULL if no PCI is returned. </param> 
+ <param name="RecvBuff">[out] Pointer to any data returned from the card. </param> 
+ <param name="RecvBuffLen">[in, out] Supplies the length, in bytes, of the pbRecvBuffer parameter and receives the actual number of bytes received from the smart card. This value cannot be SCARD_AUTOALLOCATE because SCardTransmit does not support SCARD_AUTOALLOCATE.</param> 
+ <returns>If the function successfully sends a service request to the smart card, the return value is SCARD_S_SUCCESS. 
+ If the function fails, it returns an error code. For more information, see Smart Card Return Values.</returns> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCardListReaders(System.Int32,System.String@,System.String@,System.Int32@)">
+ <summary> 
+ The SCardListReaders function provides the list of readers within a set of named reader groups, eliminating duplicates. 
+ The caller supplies a list of reader groups, and receives the list of readers within the named groups. Unrecognized group names are ignored. 
+ </summary> 
+ <param name="hContext">[in] Handle that identifies the resource manager context for the query. The resource manager context can be set by a previous call to SCardEstablishContext. This parameter cannot be NULL.</param> 
+ <param name="mzGroup">[in] Names of the reader groups defined to the system, as a multi-string. Use a NULL value to list all readers in the system (that is, the SCard$AllReaders group). </param> 
+ <param name="ReaderList">[out] Multi-string that lists the card readers within the supplied reader groups. If this value is NULL, SCardListReaders ignores the buffer length supplied in pcchReaders, writes the length of the buffer that would have been returned if this parameter had not been NULL to pcchReaders, and returns a success code.</param> 
+ <param name="pcchReaders">[in, out] Length of the mszReaders buffer in characters. This parameter receives the actual length of the multi-string structure, including all trailing null characters. If the buffer length is specified as SCARD_AUTOALLOCATE, then mszReaders is converted to a pointer to a byte pointer, and receives the address of a block of memory containing the multi-string structure. This block of memory must be deallocated with SCardFreeMemory.</param> 
+ <returns>This function returns different values depending on whether it succeeds or fails.</returns> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCardGetStatusChange(System.Int32,System.Int32,AFPSLAI_EVOLISPRIMACY.SCARD_READERSTATE@,System.Int32)">
+ <summary>
+ The SCardGetStatusChange function blocks execution until the current availability of the cards in a specific set of readers changes.
+ </summary>
+ <param name="hContext">[in] Handle that identifies the resource manager context. The resource manager context is set by a previous call to SCardEstablishContext. </param>
+ <param name="TimeOut">[in] Maximum amount of time (in milliseconds) to wait for an action. A value of zero causes the function to return immediately. A value of INFINITE causes this function never to time out. </param>
+ <param name="ReaderState">[in, out] Array of SCARD_READERSTATE structures that specify the readers to watch, and receives the result. </param>
+ <param name="ReaderCount">[in] Number of elements in the rgReaderStates array. </param>
+ <returns>This function returns different values depending on whether it succeeds or fails.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.SCardControl(System.Int32,System.Int32,System.Byte@,System.Int32,System.Byte@,System.Int32,System.Int32@)">
+ <summary> 
+ The SCardControl function gives you direct control of the reader. You can call it any time after a successful call to SCardConnect and before a successful call to SCardDisconnect. The effect on the state of the reader depends on the control code. 
+ </summary> 
+ <param name="hCard">[in] Reference value returned from SCardConnect. </param> 
+ <param name="dwControlCode">[in] Control code for the operation. This value identifies the specific operation to be performed.</param> 
+ <param name="pvInBuffer">[in] Pointer to a buffer that contains the data required to perform the operation. This parameter can be NULL if the dwControlCode parameter specifies an operation that does not require input data. </param> 
+ <param name="cbInBufferSize">[in] Size, in bytes, of the buffer pointed to by lpInBuffer. </param> 
+ <param name="pvOutBuffer">[out] Pointer to a buffer that receives the operation's output data. This parameter can be NULL if the dwControlCode parameter specifies an operation that does not produce output data. </param> 
+ <param name="cbOutBufferSize">[in] Size, in bytes, of the buffer pointed to by lpOutBuffer. </param> 
+ <param name="pcbBytesReturned">[out] Pointer to a DWORD that receives the size, in bytes, of the data stored into the buffer pointed to by lpOutBuffer. </param> 
+ <returns>This function returns different values depending on whether it succeeds or fails.</returns> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.GetScardErrMsg(System.Int64)">
+ <summary> 
+ Returns the specific error message 
+ </summary> 
+ <param name="errCode">The error code</param> 
+ <returns></returns> 
+</member>
+<member name="M:AFPSLAI_EVOLISPRIMACY.ModWinsCard.LoadListControl(System.Windows.Forms.ComboBox,System.String)">
+ <summary> 
+ Load the list from 2nd parameter (readerList) to the ComboBox control from 1st Parameter (ctrl) 
+ </summary> 
+ <param name="ctrl">The ComboBox control where do you want to load the list of reader</param> 
+ <param name="readerList">The string variable that contains the list of readers</param> 
+</member>
+</members>
+</doc>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 MZ       ÿÿ  ¸       @                                   €   º ´	Í!¸LÍ!This program cannot be run in DOS mode.
+$       PE  L ÆçQ        à !  2         Q       `    @                       À          @…                           ¸P  S    €  `                          `                                                               H           .text   1       2                    `.sdata      `      6              @  À.rsrc   `   €   
+   8              @  @.reloc             B              @  B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ğP      H     |,  <$         P   ¸                                           ´   ÎÊï¾   ‘   lSystem.Resources.ResourceReader, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.RuntimeResourceSet           PADPADP´   &(  
+  *  * (  
+  * ªs  
+€  s  
+€  s	  
+€  s
+  
+€   * 0       ~  o  
+
++ *0       ~  o  
+
++ *0       ~  o  
+
++ *0       ~  o  
+
++ *0       (  
+(  
+
++ *  0       (  
+
++ *0       Ğ  (  
+
++ *0       (  
+
++ *0     	   Œ  ş,
+(  +
+++ 
++ *0    
+    ş     *  * (  
+  * 0 4      {  
+o  
+Œ  ş,(  +{  
+o  
+  
++ *V (  
+ s  
+}  
+ *  * (  
+  * 0 C       o  
++o   
+o!  
+
+Ş& o"  
+	-å Şşş	,o#  
+  Ü
++ *     ')    0 A       o  
++o   
+
+o$  
+  + o"  
+-ã Şşş,o#  
+  Ü *       )+    0 I       o  
++o   
+o%  
+(&  
+
+Ş& o"  
+	-ß Şşş	,o#  
+  Ü
++ *       -/    0 B       o  
++o   
+
+o'  
+  + o"  
+-â Şşş,o#  
+  Ü *      *,    0       o%  
+(&  
+
++ *  2 o'  
+  *   0       ş,
++ (  
+s(  
+
++ * 0       o)  
+s(  
+
+o*  
+ + *0 T      şş	,Au  şş	,(  
++(+  u  şş	,(  
++   
++ *0 h      şş,Uu
+  şş,s  %ş  s+  
+(  +
++++# (  +s  %ş  s.  
+(  +
++  
++ *0 —     şş9  o/  
+8c  o0  
+o1  
+9I  o  +o3  
+o4  
+	şş9$  ,-+,X·Ú+>ššo5  
+,	(6  
+,o7  
+   +  Ö1¸ şş9ª   şş,o8  
+Ú		+bo9  
+
+
+o3  
+o4  
+
+o  +şş,+o5  
+,	(6  
+,o7  
+   +   Ö1” şş,o7  
+ o:  
+      şş:şÿÿ 
++ * ~ (  
+ }  }  }   *0       {  {  {  (  
++ *  0 8      u  
+şş,{  {  {  (  ++ + *0       {  o"  
++ * 0       {  o#  
++ * 0 “      ,  
+ (=  
+(>  
+o?  
+
+s@  
+(=  
+o?  
+sA  
+	{  oB  
+sC  
+·oD  
+ oE  
+ oF  
+(G  
+Ş"Ş%(H  
+ oI  
+(J  
+Ş(J  
+Ş  *     	 hq +  0 ¤      ,  
+oK  
+Ö,   (=  
+(>  
+o?  
+
+s@  
+(L  
+sA  
+{  oM  
+sC  
+	·oD  
+ 	oE  
+ (=  
+oF  
+oN  
+Ş"Ş%(H  
+ oI  
+(J  
+Ş(J  
+Ş  *     k‚ +  0 ^      (  
+ ,  
+œ4œVœxœ    œ «   œ Í   œ ï   œ}  r  p}  }   *  š(  
+ r  p}  r9  p}  }   * 0       {  
++ ** }   * * }   * * }   * * }   * 0 ,     sO  
+{  oP  
+}  {  oP  
+}  {  8Û   (Q  
+ (R  
+
+	"  ŞBZkl(S  
+·]ş,z+{  oT  
+k	Z(U  
+
+ ş-à{  “(V  
+k	Z"  ÆBZkl(S  
+·]şş,{  9  (W  
+oX  
+ oY  
+&+3 +{  oT  
+k	Z(U  
+
+ ş-à{  “oZ  
+&  Ö>ÿÿÿo[  
++ *0 ;      ~  (\  
+, rO  pĞ  (  
+o]  
+s^  
+€   ~  
++ * 0        ~  
++ * & €   *  Zs0  (_  
+t  €   * &(`  
+  *  0    !   ~  
++ * 0    "   (1  
++ * BSJB         v2.0.50727     l   Ü  #~  H  Ä  #Strings         #US œ     #GUID   ¬    #Blob         W¢		   ú3      G         2   1   k   T   "                                   ¨     
+ nD
+ ¢„ ²«
+ 
+D ˆ«
+ 
+à J/ hX ’X ÃX ŞX / bO !  Á¬ & x §x Ô¼ şë ë
+ Z3
+ r  §Š Ü¼ ú« 	«
+ 7	  q	R	 …	/ ­	O Â	« 
+X 2
+« E
+9
+ ¾
+« ï
+¼ 
+¼ : G ` m« w« ˆ|
+ š  ° Ñ Ø «
+ 3 |
+ ¨  ½« È«
+ ä3 ğ« & < €ëó ”   £¼ Ã¼ á şR	  ' B [ t ‘               ) 7        P 7 	     [ 7      e        s          7                Á Ğ  	      æ     %    ù   ,   &7 E  /    17   2 1 Í  1 ö- 1 : 1 =G !  ! …?! —C! £H Ók äk õk k ,n 4n =r @k ¬k ¸k Ä† Î‰ Û‰  š Í >¼!    ~  !    ~   !    ¹  L!    À  h!    æ(  „!    5   !    -B  ¼!    Fsc  Ü!    F|h  ô!    ƒ l  "    F•q  ("     x  T"     ¼€  t"    ~  €"    Ğ‹  À"    ~  Ø"    ~  ä"    q  D#    ‚§  ¤#    ˜²  $    °¾ 	 l$    ˜Ë  Œ$    °Ó  œ$     ÎÜ  È$     éä  ğ$     í  P%     ı  Ä%      h'    ~P! ˆ'     °_$ ´'     Åf% ø'     Dv& (     av' 8(     v{( è(     ’{* ¨)    ~, *    ~ - <*    èh - T*     - `*    . l*    '/ x*    60 „*     Cq 1 ¼+    İ¢1 ,    ñ§1 ,    ı¬1 (,    ¹ 2 @,    ~ 2 L,    NÀ2 d,    bÀ2    z   ³   ³   {   {   Œ   {   «   {   «   Œ   {   «   {   «   Œ   «   Œ   «      &   6   @   K   &   6   @   K   &   6   @   n   &   6   @   À   K   Y   Y   Y   ‡   Y   £   @   Œ   p   p   p   Œ	 ~ ‘ ~Ê¡ ~Ù© ~  ~ ± ~ $ ~ , ~ 4 ~ < ~ $ Ğ‹ , Ğ‹ 4 Ğ‹ < Ğ‹ ¹ ~ Á ~ É ~Ñ ër sc  |h ) 	 •q á (	 ~ é ~¥D  L q‹ L ‚"L ~ ñ ~0T “	B\ ¡	‹ A qq ¹	R	Î	 A ‚A Ö	oQ à	vA ì	|Q ~|Y ş	q 
+‰d ~¨!P
+®!W
+Îl ~¨A \
+÷Q o
+÷Q 
+Rœ
+üQ §
+I °
+q )sY Å
+Q Ñ
+ t Ø
+h t â
+ t ë
+"1~ 9~ i‘Pq¢Vi§\I~ Q~ IÁbA~lAéyAï Qÿ‘†™*ŒY:q ™F )Xh ‘c§Itbi„­¡~ )œÏ©¯ ©¹Ô±ÂØ¹Îİ‘ÜâÁ•çÉ•q )õq ¡ıì¡ıó¡•q  ) /y ~ÙIs‰ ~ á~ëñ~ù~ ~	~~~!~)~1~9~  # ÷) ‹ @. ;Z. S5. 35. [r. ó 5. Cr. K5. ò. û. . ##. +0@ 3 ÷@  ĞC  ĞC  ßI ‹ ,` # ÷c  ßc  Ği ‹ Q€ 3 ÷ƒ { ÷ƒ ƒ ÷ƒ  ß‰ ‹ ^  3 ÷£ Ë ­£  ĞÀ 3 ÷Ã  ĞÃ ó 5É ã÷à 3 ÷ã # ÷ã Û÷ã  Ğé ã÷  Ğ 3 ÷ ĞÛ÷# ÷	ã÷ 3 ÷  Ğ@3 ÷@ Ğ` Ğ`3 ÷c )c{ ÷cƒ ÷cÛ÷c# ÷€3 ÷ƒÛ÷ƒ jƒ  3 ÷£{ ÷£ƒ ÷£Û÷£# ÷© jÀ ĞÀ3 ÷É jà3 ÷ 3 ÷  Ğ	‹ Ú  Ğ  Ğ  Ğ@ Ğ` Ğ€ Ğ  ĞÀ Ğà Ğ # ÷"'w{†‹š (VcVc‹ƒ•ë&DI‹‹“³Ê{ú$||      
+ 	         ¢O   [T   
+Y   g^   #˜   p!  v+  v7  L’  `–  k–  v’  ²  	·  ZÅ  oÅ           	                       '   &   (   )   *   ,   .   -   1   2 ! u u ˆ ü
+;KŞ€               Ğ               
+                
+                 X                «               &
+           V        
+ 	     ±    ±     ±/ •/ Y Ç[ ÚY æe    <Module> mscorlib Microsoft.VisualBasic MyApplication AllcardEncryptDecrypt.My MyComputer MyProject MyWebServices ThreadSafeObjectProvider`1 InternalXmlHelper RemoveNamespaceAttributesClosure EncryptDecrypt AllcardEncryptDecrypt RandomKeyGenerator Resources AllcardEncryptDecrypt.My.Resources MySettings MySettingsProperty Microsoft.VisualBasic.ApplicationServices ApplicationBase .ctor Microsoft.VisualBasic.Devices Computer System Object .cctor get_Computer m_ComputerObjectProvider get_Application m_AppObjectProvider User get_User m_UserObjectProvider get_WebServices m_MyWebServicesObjectProvider Application WebServices Equals o GetHashCode Type GetType ToString Create__Instance__ T instance Dispose__Instance__ get_GetInstance Microsoft.VisualBasic.MyServices.Internal ContextValue`1 m_Context GetInstance System.Collections.Generic IEnumerable`1 System.Xml.Linq XElement get_Value source set_Value value XName get_AttributeValue name set_AttributeValue XAttribute CreateAttribute XNamespace CreateNamespaceAttribute ns List`1 RemoveNamespaceAttributes inScopePrefixes inScopeNs attributes obj System.Collections IEnumerable e Value AttributeValue m_inScopePrefixes m_inScopeNs m_attributes ProcessXElement elem ProcessObject strFileToEncrypt strFileToDecrypt strOutputEncrypt strOutputDecrypt System.IO FileStream fsInput fsOutput IV key TripleDesEncryptText strText TripleDesDecryptText TripleDesEncrypt strEncrKey TripleDesDecrypt sDecrKey Key_Letters Key_Numbers Key_Chars LettersArray NumbersArray get_NoOfCharsToGenerate set_NoOfCharsToGenerate set_KeyLetters set_KeyNumbers set_KeyChars Generate NoOfCharsToGenerate KeyLetters KeyNumbers KeyChars System.Resources ResourceManager resourceMan System.Globalization CultureInfo resourceCulture get_ResourceManager get_Culture set_Culture Culture System.Configuration ApplicationSettingsBase defaultInstance get_Default Default get_Settings Settings System.ComponentModel EditorBrowsableAttribute EditorBrowsableState System.CodeDom.Compiler GeneratedCodeAttribute System.Diagnostics DebuggerNonUserCodeAttribute DebuggerHiddenAttribute Microsoft.VisualBasic.CompilerServices StandardModuleAttribute HideModuleNameAttribute System.ComponentModel.Design HelpKeywordAttribute System.Runtime.CompilerServices RuntimeHelpers GetObjectValue RuntimeTypeHandle GetTypeFromHandle Activator CreateInstance MyGroupCollectionAttribute System.Runtime.InteropServices ComVisibleAttribute IEnumerator`1 GetEnumerator get_Current IEnumerator MoveNext IDisposable Dispose Attribute op_Explicit SetAttributeValue get_NamespaceName XObject AddAnnotation System.Core Func`2 System.Linq Enumerable Select Cast get_FirstAttribute get_NextAttribute get_IsNamespaceDeclaration Annotation get_Name get_LocalName String op_Equality Remove get_Count get_Item Add CompilerGeneratedAttribute ExtensionAttribute System.Security.Cryptography CryptoStream DESCryptoServiceProvider MemoryStream Exception Byte System.Text Encoding get_UTF8 Strings Left GetBytes ICryptoTransform CreateEncryptor Stream CryptoStreamMode Write FlushFinalBlock ToArray Convert ToBase64String ProjectData SetProjectError get_Message ClearProjectError get_Length FromBase64String CreateDecryptor GetString StringBuilder ToCharArray VBMath Randomize Rnd Math Round Array GetUpperBound ToInt16 Conversions Char ToUpper Append ReferenceEquals System.Reflection Assembly get_Assembly SettingsBase Synchronized AllcardEncryptDecrypt.Resources.resources DebuggableAttribute DebuggingModes CompilationRelaxationsAttribute RuntimeCompatibilityAttribute AssemblyFileVersionAttribute GuidAttribute AssemblyTrademarkAttribute AssemblyCopyrightAttribute AssemblyProductAttribute AssemblyCompanyAttribute AssemblyDescriptionAttribute AssemblyTitleAttribute AllcardEncryptDecrypt.dll     5a b c d e f g h i j k l m n o p q r s t u v w x y z  0 1 2 3 4 5 6 7 8 9  ?A l l c a r d E n c r y p t D e c r y p t . R e s o u r c e s   Î¨££n“A‰á7ÎÏ£ ·z\V4à‰°?_Õ
+:                          0      (  	 !
+ ! !% !% !% !% )% )%- -1) 5-1)5 !-1)!	!!%!%-1) -1) !! 9    ( ( =A  =  A A = A0  0 0 M        
+MyTemplate8.0.0.0      My.Application   My.Computer   My.User   My.WebServices    m  
+    a 4System.Web.Services.Protocols.SoapHttpClientProtocolCreate__Instance__Dispose__Instance__     
+          !  } }!  !}!!}! )% ) %) ))!5	€!!  € 
+!! 5
+€
+5!  )0  
+-  %  --1)  !))--)-!!  €µ  	 €½ €Á€½€Å     €­€¡€¥€©€­  €¡€¥€µ€©€­         €Ñ €Ñ	€Ñ   €é €é==A@ 3System.Resources.Tools.StronglyTypedResourceBuilder2.0.0.0         €í€í0X KMicrosoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator9.0.0.0   My.Settings   €õ             TWrapNonExceptionThrows 1.0.0.0  ) $4466e0b7-e9c0-401b-9ac8-e116caba8a92   Copyright Â©  2013   AllcardEncryptDecrypt     àP          şP                          ğP                _CorDllMain mscoree.dll     ÿ%  @                                                                                                                                                                                                                                                 ÆçQ       t   `  6  RSDS:OíÌ%ÀN ÿ„V«ÿ   E:\Projects\AllcardEncryptDecrypt\AllcardEncryptDecrypt\obj\Debug\AllcardEncryptDecrypt.pdb                                                                                                                                                                                                                                                                                                                                                                                                   (  €   H  €   `  €                  x  €     €                  ¨  €                  À  €                   Ø                      è                      ø                        („  è          ‡  (          8ˆ  "                       4   V S _ V E R S I O N _ I N F O     ½ïş                 ?                         D    V a r F i l e I n f o     $    T r a n s l a t i o n       °p   S t r i n g F i l e I n f o   L   0 0 0 0 0 4 b 0   T   F i l e D e s c r i p t i o n     A l l c a r d E n c r y p t D e c r y p t   0   F i l e V e r s i o n     1 . 0 . 0 . 0   T   I n t e r n a l N a m e   A l l c a r d E n c r y p t D e c r y p t . d l l   H   L e g a l C o p y r i g h t   C o p y r i g h t   ©     2 0 1 3   \   O r i g i n a l F i l e n a m e   A l l c a r d E n c r y p t D e c r y p t . d l l   L   P r o d u c t N a m e     A l l c a r d E n c r y p t D e c r y p t   4   P r o d u c t V e r s i o n   1 . 0 . 0 . 0   8   A s s e m b l y   V e r s i o n   1 . 0 . 0 . 0   (       @         €                        €  €   €€ €   € € €€  €€€ ÀÀÀ   ÿ  ÿ   ÿÿ ÿ   ÿ ÿ ÿÿ  ÿÿÿ                                                                  wwwwwwwwwwwwwwpDDDDDDDDDDDDDDpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpÿÿÿÿÿÿÿÿÿÿÿÿÿôpˆˆˆˆˆˆˆˆˆˆˆˆˆ„pDDDDDDDDDDDDDDpLLLLLLLLLNÎÎItpÌÌÌÌÌÌÌÌÌÌÌÌÌÄ  DDDDDDDDDDDDD@                                                 ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÀ  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  À  ÿÿÿÿÿÿÿÿÿÿÿÿ(                À                         €  €   €€ €   € € €€  €€€ ÀÀÀ   ÿ  ÿ   ÿÿ ÿ   ÿ ÿ ÿÿ  ÿÿÿ         wwwwwwwDDDDDDDGOÿÿÿÿÿøGOÿÿÿÿÿøGOÿÿÿÿÿøGOÿÿÿÿÿøGOÿÿÿÿÿøGOÿÿÿÿÿøGOÿÿÿÿÿøGOÿÿÿÿÿøGHˆˆˆˆˆˆGLÌÌÌÌÌÌGÄDDDDDDÀ                ÿÿ  €                                                  ÿÿ  ÿÿ           è      (                                                                                                                                                                                                                                                                                                                                                                                                                                          P     1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ï»¿
+Public Class Setting
+
+    Private Sub Setting_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        InitializeReaderList()
+        GetInstalledPrinters()
+
+        BindSettings()
+        BindCardElements()
+
+        lblSignaturePresident.Text = PrintCard.presidentSignatureFile
+        If System.IO.File.Exists(PrintCard.presidentSignatureFile) Then picSignaturePresident.Image = Image.FromStream(New System.IO.MemoryStream(System.IO.File.ReadAllBytes(PrintCard.presidentSignatureFile)))
+    End Sub
+
+    Private Sub BindSettings()
+        cboCardReader.SelectedIndex = cboCardReader.FindStringExact(My.Settings.PCSCReader)
+        cboPrinter.SelectedIndex = cboPrinter.FindStringExact(My.Settings.CardPrinter)
+        txtServer.Text = My.Settings.Server
+        txtDatabase.Text = My.Settings.Database
+        txtUser.Text = My.Settings.User
+        txtPassword.Text = My.Settings.Password
+        txtCapturedData.Text = My.Settings.CapturedData
+        chkAPDU.Checked = My.Settings.OMNIAPDU
+    End Sub
+
+    Private Sub BindCardElements()
+        Dim ce As New CardElements
+        txtPhoto_X.Text = ce.Photo_X
+        txtPhoto_Y.Text = ce.Photo_Y
+        txtPhoto_Width.Text = ce.Photo_Width
+        txtPhoto_Height.Text = ce.Photo_Height
+        txtSign_X.Text = ce.Signature_X
+        txtSign_Y.Text = ce.Signature_Y
+        txtSign_Width.Text = ce.Signature_Width
+        txtSign_Height.Text = ce.Signature_Height
+        txtBarcode_X.Text = ce.Barcode_X
+        txtBarcode_Y.Text = ce.Barcode_Y
+        txtBarcode_Width.Text = ce.Barcode_Width
+        txtBarcode_Height.Text = ce.Barcode_Height
+        txtName_X.Text = ce.Name_X
+        txtName_Y.Text = ce.Name_Y
+        txtCIF_X.Text = ce.CIF_X
+        txtCIF_Y.Text = ce.CIF_Y
+        txtAddress_X.Text = ce.Address_X
+        txtAddress_Y.Text = ce.Address_Y
+        txtContact_X.Text = ce.ContactNos_X
+        txtContact_Y.Text = ce.ContactNos_Y
+        txtDOB_X.Text = ce.DOB_X
+        txtDOB_Y.Text = ce.DOB_Y
+        txtIDNumber_X.Text = ce.IDNumber_X
+        txtIDNumber_Y.Text = ce.IDNumber_Y
+        txtIssueDate_X.Text = ce.IssueDate_X
+        txtIssueDate_Y.Text = ce.IssueDate_Y
+        txtContactName_X.Text = ce.ContactName_X
+        txtContactName_Y.Text = ce.ContactName_Y
+        txtContactContactNos_X.Text = ce.ContactContactNos_X
+        txtContactContactNos_Y.Text = ce.ContactContactNos_Y
+        txtBranch_X.Text = ce.Branch_X
+        txtBranch_Y.Text = ce.Branch_Y
+
+        txtSign_Pres_X.Text = ce.Signature_President_X
+        txtSign_Pres_Y.Text = ce.Signature_President_Y
+        txtSign_Pres_Width.Text = ce.Signature_President_Width
+        txtSign_Pres_Height.Text = ce.Signature_President_Height
+
+        txtBio_X.Text = ce.Biometric_X
+        txtBio_Y.Text = ce.Biometric_Y
+        txtBio_Width.Text = ce.Biometric_Width
+        txtBio_Height.Text = ce.Biometric_Height
+        ce = Nothing
+    End Sub
+
+    Private Sub SaveSettings()
+        If cboCardReader.Text <> "" Then My.Settings.PCSCReader = cboCardReader.Text
+        If cboPrinter.Text <> "" Then My.Settings.CardPrinter = cboPrinter.Text
+        My.Settings.Server = txtServer.Text
+        My.Settings.Database = txtDatabase.Text
+        My.Settings.User = txtUser.Text
+        My.Settings.Password = txtPassword.Text
+        My.Settings.CapturedData = txtCapturedData.Text
+        My.Settings.OMNIAPDU = chkAPDU.Checked
+        My.Settings.Save()
+    End Sub
+
+    Private Function FormatElementValue(ByVal txtBox As TextBox) As Integer
+
+    End Function
+
+    Private Sub SaveElements()
+        Try
+            Dim ce As New CardElements
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.PhotoElement))(0)("Parameter") = String.Format("{0},{1},{2},{3}", txtPhoto_X.Text, txtPhoto_Y.Text, txtPhoto_Width.Text, txtPhoto_Height.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.SignatureElement))(0)("Parameter") = String.Format("{0},{1},{2},{3}", txtSign_X.Text, txtSign_Y.Text, txtSign_Width.Text, txtSign_Height.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.BiometricElement))(0)("Parameter") = String.Format("{0},{1},{2},{3}", txtBio_X.Text, txtBio_Y.Text, txtBio_Width.Text, txtBio_Height.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.BarcodeElement))(0)("Parameter") = String.Format("{0},{1},{2},{3}", txtBarcode_X.Text, txtBarcode_Y.Text, txtBarcode_Width.Text, txtBarcode_Height.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.NameElement))(0)("Parameter") = String.Format("{0},{1}", txtName_X.Text, txtName_Y.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.CIFElement))(0)("Parameter") = String.Format("{0},{1}", txtCIF_X.Text, txtCIF_Y.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.AddressElement))(0)("Parameter") = String.Format("{0},{1}", txtAddress_X.Text, txtAddress_Y.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.ContactNosElement))(0)("Parameter") = String.Format("{0},{1}", txtContact_X.Text, txtContact_Y.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.DOBElement))(0)("Parameter") = String.Format("{0},{1}", txtDOB_X.Text, txtDOB_Y.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.IDNumberElement))(0)("Parameter") = String.Format("{0},{1}", txtIDNumber_X.Text, txtIDNumber_Y.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.IssueDateElement))(0)("Parameter") = String.Format("{0},{1}", txtIssueDate_X.Text, txtIssueDate_Y.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.ContactNameElement))(0)("Parameter") = String.Format("{0},{1}", txtContactName_X.Text, txtContactName_Y.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.ContactContactNosElement))(0)("Parameter") = String.Format("{0},{1}", txtContactContactNos_X.Text, txtContactContactNos_Y.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.BranchElement))(0)("Parameter") = String.Format("{0},{1}", txtBranch_X.Text, txtBranch_Y.Text)
+            ce.TableElements.Select(String.Format("CardElement='{0}'", ce.SignaturePresidentElement))(0)("Parameter") = String.Format("{0},{1},{2},{3}", txtSign_Pres_X.Text, txtSign_Pres_Y.Text, txtSign_Pres_Width.Text, txtSign_Pres_Height.Text)
+            ce.SaveTable()
+            ce = Nothing
+        Catch ex As Exception
+            MessageBox.Show("Failed to save card elements..." & vbNewLine & vbNewLine & ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+
+    End Sub
+
+    Public Sub InitializeReaderList()
+
+        Dim sReaderList As String = ""
+        Dim ReaderCount As Integer
+        Dim ctr As Integer
+
+        For ctr = 0 To 255
+            sReaderList = sReaderList + vbNullChar
+        Next
+
+        ReaderCount = 255
+
+        retCode = ModWinsCard.SCardEstablishContext(ModWinsCard.SCARD_SCOPE_USER, 0, 0, hContext)
+
+        If retCode <> ModWinsCard.SCARD_S_SUCCESS Then
+            displayOut(1, retCode, "", New ListBox)
+            Exit Sub
+        End If
+
+        retCode = ModWinsCard.SCardListReaders(hContext, "", sReaderList, ReaderCount)
+
+        If retCode <> ModWinsCard.SCARD_S_SUCCESS Then
+            displayOut(1, retCode, "", New ListBox)
+            Exit Sub
+
+        End If
+
+        Dim SmartCardReaders(9) As String
+        LoadListToControl(SmartCardReaders, sReaderList)
+
+        For Each strReader As String In SmartCardReaders
+            If Not strReader Is Nothing Then
+                cboCardReader.Items.Add(strReader)
+            End If
+        Next
+    End Sub
+
+    Public Sub LoadListToControl(ByVal Readers As String(), ByVal ReaderList As String)
+
+        Dim sTemp As String
+        Dim indx As Integer
+        Dim ctr As String = 0
+
+        indx = 1
+        sTemp = ""
+
+        While (Mid(ReaderList, indx, 1) <> vbNullChar)
+
+            While (Mid(ReaderList, indx, 1) <> vbNullChar)
+                sTemp = sTemp + Mid(ReaderList, indx, 1)
+         
